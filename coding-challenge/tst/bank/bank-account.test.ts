@@ -45,19 +45,38 @@ describe('Tests for bank account class', () => {
     });
 
     it('should withdraw the specified amount and update the current balance', () => {
-
+        // Arrange
+        bankAccount.withdraw(1);
+        
+        // Assert
+        expect(bankAccount.balance).toBe(initialBalance - 1);
     });
 
     //#endregion
 
     //#region Deposit
 
-    it('should throw a "Deposit amount has to be greater than 0" error!', () => {
-
+    it('should throw a "Deposit amount has to be greater than 0!" error', () => {
+        // Arrange
+        const depositAmount = -5;
+        
+        // Act & Assert
+        expect(() => {
+            bankAccount.deposit(depositAmount);
+        }).toThrow('Deposit amount has to be greater than 0!')
     });
 
     it('should update the account balance with the specified sum!', () => {
+        // Arrange
+        const depositAmount = 100;
 
+        // Act
+        bankAccount.deposit(depositAmount);
+
+        // Assert
+        expect(
+            bankAccount.balance
+        ).toBe(initialBalance + depositAmount);
     });
 
     //#endregion
@@ -86,7 +105,19 @@ describe('Tests for bank account class', () => {
     });
 
     it('should transfer the specified sum back to the source account if the deposit operation fails!', () => {
+        // Act
+        let destinationBankAccount;
+        const transferAmount = 100;
+        
+        // Act & Assert
+        expect(() => {
+            bankAccount.transfer(transferAmount, destinationBankAccount);
+        }).toThrow('Something went wrong! Transaction canceled!');
 
+        // Assert
+        expect(
+            bankAccount.checkBalance()
+        ).toBe(initialBalance);
     });
     //#endregion
 

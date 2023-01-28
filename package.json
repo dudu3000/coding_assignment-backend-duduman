@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc",
-    "test": "jest --coverage",
-    "test-ci": "jest --collectCoverage=true"
+    "test": "jest --coverage"
   },
   "keywords": [],
   "author": "",

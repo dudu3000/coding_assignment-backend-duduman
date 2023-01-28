@@ -7,8 +7,5 @@
   },
   "exclude": [
     "node_modules"
-  ],
-  "include": [
-    "final-version/src/**/*"
   ]
 }
