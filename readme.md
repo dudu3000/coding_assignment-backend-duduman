@@ -20,3 +20,13 @@ Create a branch with your name on this repository and open a PR. Just push your 
 
 Good luck!
 
+# Solving
+## Setup project
+1. Clone git repository
+2. Run `npm install`
+<hr>
+
+## Test implementation
+1. Run `npm run test`
+3. Open (with browser) `./coverage/lcov-report/index.html` and check `bank-accounts.ts`.
+4. To build the project run: `npm run build`. Results can be found in `./build` folder.
