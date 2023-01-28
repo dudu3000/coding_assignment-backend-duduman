@@ -30,3 +30,11 @@ Good luck!
 1. Run `npm run test`
 3. Open (with browser) `./coverage/lcov-report/index.html` and check `bank-accounts.ts`.
 4. To build the project run: `npm run build`. Results can be found in `./build` folder.
+<hr>
+
+## Effort
+1. Implement new method `transfer`: 20 minutes
+2. Create all testcases required: 30 minutes
+3. Add cases to reach 100% coverage: 20 minutes
+
+> Total: `70 minues`
